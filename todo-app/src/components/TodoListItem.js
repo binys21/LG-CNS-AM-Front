@@ -5,11 +5,14 @@ import {
 } from "react-icons/md";
 import "./TodoListItem.css";
 
-export default ({ todo, removeTodo }) => {
+export default ({ todo, removeTodo, toggleTodo }) => {
   const { id, checked, text } = todo;
   return (
     <div className="TodoListItem">
-      <div className={checked ? "checkBox checked" : "checkBox"}>
+      <div
+        className={checked ? "checkBox checked" : "checkBox"}
+        onClick={() => toggleTodo(id)}
+      >
         {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
 
         <div class="text">{text}</div>

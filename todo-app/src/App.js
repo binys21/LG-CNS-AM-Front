@@ -23,10 +23,17 @@ function App() {
     setTodos(newTodos);
   };
 
+  const toggleTodo = (id) => {
+    const newTodos = todos.map((todo) =>
+      todo.id === id ? { ...todo, checked: !todo.checked } : todo
+    );
+    setTodos(newTodos);
+  };
+
   return (
     <TodoTemplate>
       <TodoInsert insertTodo={insertTodo} />
-      <TodoList todos={todos} removeTodo={removeTodo} />
+      <TodoList todos={todos} removeTodo={removeTodo} toggleTodo={toggleTodo} />
     </TodoTemplate>
   );
 }
