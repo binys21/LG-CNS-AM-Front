@@ -18,10 +18,15 @@ function App() {
     nextId.current++;
   };
 
+  const removeTodo = (id) => {
+    const newTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodos);
+  };
+
   return (
     <TodoTemplate>
       <TodoInsert insertTodo={insertTodo} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} removeTodo={removeTodo} />
     </TodoTemplate>
   );
 }

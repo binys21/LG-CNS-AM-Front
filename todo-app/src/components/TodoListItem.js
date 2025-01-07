@@ -5,7 +5,7 @@ import {
 } from "react-icons/md";
 import "./TodoListItem.css";
 
-export default ({ todo }) => {
+export default ({ todo, removeTodo }) => {
   const { id, checked, text } = todo;
   return (
     <div className="TodoListItem">
@@ -14,7 +14,7 @@ export default ({ todo }) => {
 
         <div class="text">{text}</div>
       </div>
-      <div className="remove">
+      <div className="remove" onClick={() => removeTodo(id)}>
         <MdRemoveCircleOutline />
       </div>
     </div>
