@@ -4,9 +4,12 @@ import {
   MdRemoveCircleOutline,
 } from "react-icons/md";
 import "./TodoListItem.css";
+import { useContext } from "react";
+import TodoContext from "../TodoContext";
 
-export default ({ todo, removeTodo, toggleTodo }) => {
+export default ({ todo }) => {
   const { id, checked, text } = todo;
+  const { removeTodo, toggleTodo } = useContext(TodoContext);
   return (
     <div className="TodoListItem">
       <div

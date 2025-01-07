@@ -1,8 +1,10 @@
 import { MdAdd } from "react-icons/md";
 import "./TodoInsert.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import TodoContext from "../TodoContext";
 
-const TodoInsert = ({ insertTodo }) => {
+const TodoInsert = () => {
+  const { insertTodo } = useContext(TodoContext);
   const [value, setValue] = useState("");
   const changeValue = (e) => setValue(e.target.value);
 
