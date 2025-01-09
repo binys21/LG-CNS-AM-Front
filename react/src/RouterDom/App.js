@@ -7,17 +7,6 @@ import Profiles from "./Profiles";
 function App() {
   return (
     <BrowserRouter>
-      <ul>
-        <li>
-          <Link to="/">홈</Link>
-        </li>
-        <li>
-          <Link to="/about">소개</Link>
-        </li>
-        <li>
-          <Link to="/profiles">프로파일</Link>
-        </li>
-      </ul>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/" element={<About />} />
