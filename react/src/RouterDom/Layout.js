@@ -23,6 +23,9 @@ export default function Layout() {
           <li>
             <Link to="/profiles">프로파일</Link>
           </li>
+          <li>
+            <Link to="/mypage">마이페이지</Link>
+          </li>
         </ul>
         <button onClick={() => navigate(-1)}>이전 페이지로 이동 </button>
         <button onClick={() => navigate("/info")}>정보 페이지로 이동</button>
