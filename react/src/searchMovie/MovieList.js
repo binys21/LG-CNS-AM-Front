@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./MovieList.css";
+import { Link } from "react-router-dom";
 const MovieList = () => {
   const [title, setTitle] = useState("");
   const [movies, setMovies] = useState([]);
@@ -38,7 +39,9 @@ const MovieList = () => {
               <img src={`https://image.tmdb.org/t/p/w500${m.poster_path}`} />
             </div>
             <div className="text">
-              <h1>{movie.title}</h1>
+              <h1>
+                <Link to={`/movieDetail/${movie.id}`}>{movie.title}</Link>
+              </h1>
               <p>{movie.overview}</p>
             </div>
           </div>
