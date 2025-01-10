@@ -1,0 +1,109 @@
+div.container {
+  width: 920px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #e0f7fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+}
+
+.search {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.search input {
+  flex: 1;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search input:focus {
+  border-color: #007bff;
+}
+
+.search button {
+  padding: 15px 25px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+div.movie {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  margin: 15px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff; /* 영화 카드 배경 흰색 유지 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+div.movie:hover {
+  transform: scale(1.02);
+}
+
+div.poster {
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+div.poster img {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+div.text {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.text h1 {
+  font-size: 20px;
+  color: #343a40;
+  margin: 0;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+div.text h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+div.text h1 a:hover {
+  color: #007bff;
+}
+
+div.text p {
+  font-size: 14px;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+div.text p::first-line {
+  font-weight: bold;
+}
